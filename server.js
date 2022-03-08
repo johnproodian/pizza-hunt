@@ -21,4 +21,4 @@ mongoose.set('debug', true);
 app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
 
 
-// 1/3 thru 18.1.6; just created a few find methods
+// thru 18.1.7; onto 18/1/8;
