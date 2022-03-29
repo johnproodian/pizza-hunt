@@ -10,6 +10,7 @@ request.onupgradeneeded = function(event) {
     const db = event.target.result;
     // create an object store (table) called `new_pizza`, set it to have an auto incrementing primary key of sorts 
     db.createObjectStore('new_pizza', { autoIncrement: true });
+    console.log(db);
 }
 
 // upon a successful
@@ -27,7 +28,8 @@ request.onerror = function(event) {
 
 // This function will be executed if we attempt to submit a new pizza and there's no internet connection
 function saveRecord(record) {
-    console.log(record);
+    console.log(db);
+    
     // open a new transaction with the database with read and write permissions
     const transaction = db.transaction(['new_pizza'],'readwrite');
 
