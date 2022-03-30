@@ -16,8 +16,11 @@ request.onupgradeneeded = function(event) {
 // upon a successful
 request.onsuccess = function(event) {
     // when db is successfully created with its object store (from onupgradeneeded event above) or simply established a connection, save reference to db in global variable
+    db = event.target.result;
+
+    // check if app is online, if yes run uploadPizza() function to send all local db data to api
     if (navigator.onLine) {
-        // uploadPizza();
+        uploadPizza();
     }
 };
 
@@ -64,7 +67,7 @@ function uploadPizza() {
             })
                 .then(response => response.json())
                 .then(serverResponse => {
-                    if (serverResponse) {
+                    if (serverResponse.message) {
                         throw new Error(serverResponse);
                     }
                     // open one more transaction
@@ -82,3 +85,6 @@ function uploadPizza() {
         }
     };
 }
+
+// listen for app coming back online
+window.addEventListener('online', uploadPizza);

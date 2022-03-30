@@ -21,4 +21,4 @@ mongoose.set('debug', true);
 app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
 
 
-// about midway through 18.4.7
+// Done w/ 18.4; onto 18.5
