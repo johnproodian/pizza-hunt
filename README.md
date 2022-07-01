@@ -4,13 +4,13 @@ A social media recipe app where users can post their creative their own pizza re
 
 Given an existing front-end, I added back-end functionality (RESTful API, MongoDB).
 
-
-
-
 ## Installation/Usage
 
 ## Built With
-* 
+* JavaScript
+* Express
+* NoSQL/MongoDB
+* Mongoose
 
 
 ## Website
