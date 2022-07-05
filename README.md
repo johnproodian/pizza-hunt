@@ -1,6 +1,6 @@
 # Pizza Hunt
 
-A social media recipe app where users can post their creative their own pizza recipes, add comments to recipes, and create threads within comments. 
+A social media recipe app where users can post their own pizza recipes, add comments to recipes, and create threads within comments. 
 
 Given an existing front-end, I added back-end functionality (RESTful API, MongoDB).
 
